@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet" />
+    <title>The dog's breed</title>
+    <style>
+        :root {
+            --white: #ffffff;
+            --black: #000000;
+            --dark: #232830;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #e0e6ef;
+            --hospital-green: #A882DD;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            font-family: "Quicksand", sans-serif;
+            height: 100vh;
+            width: 100%;
+            background-image: url(./imagenes/pattern.svg);
+            background-size:  cover;
+            background-repeat: no-repeat;
+        }
+
+        .content {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .check-box {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            width: 300px;
+        }
+
+        .logo {
+            height: auto;
+            width: 100%;
+            justify-self: center;
+            display: none;
+        }
+
+        .label {
+            font-size: var(--md);
+            color: var(--black);
+            font-weight: bold;
+            margin-top: 16px;
+            margin-bottom: 4px;
+        }
+
+        .box-email {
+            color: var(--dark);
+            font-size: var(--sm);
+            background-color: var(--text-input-field);
+            border-radius: 6px;
+            border: none;
+            width: 100%;
+            height: 32px;
+            padding: 6px;
+        }
+
+        .input-password {
+            color: var(--dark);
+            font-size: var(--sm);
+            background-color: var(--text-input-field);
+            border-radius: 8px;
+            border: none;
+            width: 100%;
+            height: 32px;
+            padding: 6px;
+        }
+
+        .login {
+            font-family: "Quicksand", sans-serif;
+            margin-top: 32px;
+            background-color: var(--hospital-green);
+            border: none;
+            height: 50px;
+            border-radius: 8px;
+            color: var(--white);
+            font-size: var(--lg);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .forgot {
+            display: flex;
+            justify-content: center;
+            margin: 32px 0;
+        }
+
+        .forgot a {
+            color: var(--hospital-green);
+            text-decoration: none;
+        }
+
+        .sing-up-button {
+            margin-top: 80px;
+            background-color: var(--white);
+            border: solid 1px var(--hospital-green);
+            height: 50px;
+            border-radius: 8px;
+            color: var(--hospital-green);
+            font-size: var(--lg);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media (max-width: 640px) {
+            .logo {
+                display: block;
+            }
+
+            .sing-up-button {
+                width: 300px;
+                position: relative;
+                bottom: 0;
+                margin-bottom: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="content">
+        <img src="./imagenes/logo.png" class="logo" alt="logo">
+        <form class="check-box">
+            <label for="email" class="label">Email address</label>
+            <input type="text" id="email" placeholder="Correoejemplo@gmail.com" class="box-email"></input>
+            <label for="password" class="label">Password</label>
+            <input type="password" class="input-password" placeholder="************" id="password"></input>
+            <input type="submit" value="Log in" class="login"></input>
+            <p class="forgot"><a href="/">Forgot my password</a></p>
+            <input type="submit" value="Sign up" class="sing-up-button">
+        </form>
+        </div>
+</body>
+
+</html>

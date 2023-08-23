@@ -1,0 +1,20 @@
+<svg class="border shadow-md" viewBox="0 0 285.12 506.88" style="width: 285.12px; height: 506.88px;"
+    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <rect class="bg" id="bg" x="0" y="0" width="285.12" height="506.88" fill="#ffffff"></rect>
+    <g transform="rotate(41 142.56 253.44)">
+        <path
+            d="M -253.44 336.88 S -136.72 310.88
+            0.00 336.88 17.44 236.88
+            253.44 336.88 370.16 277.8
+            506.88 336.88 623.60 307.88
+            760.32 336.88 h 110 V 1106.88 H -253.44 Z"
+            fill="none" stroke="#A882DD" stroke-width="2"></path>
+        <path
+            d="M -253.44 195.00 S -250.00 63.00
+            0.00 195.00 15.44 107.50
+            253.44 195.00 334.88 107.50
+            506.88 195.00 565.32 107.50
+            760.32 195.00 h 110 V -600 H -253.44 Z"
+            fill="none" stroke="#7E9ECD" stroke-width="2"></path>
+    </g>
+</svg>
