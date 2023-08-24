@@ -63,7 +63,6 @@
             margin: 16px 0 4px;
         }
 
-        .box-email,
         .input-password {
             color: var(--dark);
             font-size: var(--sm);
@@ -73,6 +72,23 @@
             width: 100%;
             height: 32px;
             padding: 6px;
+        }
+
+
+        .label:nth-child(1) {
+            color: red;
+        }
+
+        .box-email {
+            color: var(--dark);
+            font-size: var(--sm);
+            background-color: rgb(253, 233, 233);
+            border: 1px solid red;
+            border-radius: 6px;
+            width: 100%;
+            height: 32px;
+            padding: 6px;
+            outline-color: red;
         }
 
         .box-email:focus,
@@ -141,7 +157,7 @@
     <section class="content">
         <a href="/"><img class="logo" src="/imagenes/logo.png" alt="logo"></a>
         <form class="check-box">
-            <label for="email" class="label">Email address</label>
+            <label for="email" class="label" id="invalid">Email address</label>
             <input type="text" id="email" placeholder="Correoejemplo@gmail.com" class="box-email"></input>
             <label for="password" class="label">Password</label>
             <input type="password" class="input-password" placeholder="************" id="password"></input>

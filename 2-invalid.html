@@ -32,6 +32,9 @@
             font-family: "Quicksand", sans-serif;
             height: 100vh;
             width: 100%;
+            background-image: url(./imagenes/pattern.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         .content {
@@ -56,52 +59,111 @@
 
         .label {
             font-size: var(--md);
-            color: red;
             font-weight: bold;
-            margin-top: 16px;
-            margin-bottom: 4px;
-        }
-        .box-email{
-            height: 32px;
-            width: 100%;
-            background-color: rgb(253, 233, 233);
-            border-radius: 8px;
-            border: 1px solid red;
-            padding: 6px;
-            color: var(--dark);
-            font-size: var(--sm);
-        }
-        .input-password{
-            height: 32px;
-            width: 100%;
-            background-color: rgb(253, 233, 233);
-            border: 1px solid red;
-            border-radius: 8px;
-            padding: 6px;
-            color: var(--dark);
-            font-size: var(--sm);
-        }
-        .invalid{
             color: red;
+            margin: 16px 0 4px;
+        }
+
+        .email-box,
+        .password-box {
+            color: var(--dark);
             font-size: var(--sm);
+            background-color: rgb(253, 233, 233);
+            border: 1px solid red;
+            border-radius: 6px;
+            width: 100%;
+            height: 32px;
+            padding: 6px;
+            outline-color: red;
+        }
+
+        .email-box:focus,
+        .password-box:focus {
+            background-color: var(--text-input-field);
+            font-size: var(--lg);
+            font-weight: 400;
+        }
+
+        .invalid {
+            display: flex;
+            margin: 18px 0;
+            text-align: center;
+        }
+
+        .invalid a {
+            text-decoration: none;
+            color: red;
+        }
+
+        .log-in {
+            font-family: "Quicksand", sans-serif;
+            margin: 16px 0;
+            background-color: var(--hospital-green);
+            border: none;
+            height: 50px;
+            width: 100%;
+            border-radius: 8px;
+            color: var(--white);
+            font-size: var(--lg);
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+        }
+
+
+        .forgot {
+            display: flex;
+            justify-content: center;
+            margin: 18px 0;
+        }
+
+        .forgot a {
+            color: var(--hospital-green);
+            text-decoration: none;
+        }
+
+        .sign-up {
+            font-family: "Quicksand", sans-serif;
+            border: 1px solid var(--hospital-green);
+            font-size: var(--lg);
+            font-weight: bold;
+            height: 50px;
+            width: 300px;
+            background-color: var(--white);
+            color: #A882DD;
+            cursor: pointer;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 640px) {
+            .logo {
+                display: block;
+            }
+
+            .sign-up {
+                width: 300px;
+                position: relative;
+                bottom: 0;
+            }
         }
     </style>
 </head>
 
 <body>
     <section class="content">
-        <img src="./imagenes/logo.png" class="logo" alt="logo">
-        <form action="check-box">
-            <label for="email" class="label">Email address</label>
-            <input type="text" id="email" placeholder="Correoejemplo@gmail.com" class="box-email">
+        <a href="/"><img class="logo" src="/imagenes/logo.png" alt="logo"></a>
+        <form class="check-box">
+            <label for="Email" class="label">Email address</label>
+            <input type="text" id="Email" class="email-box" placeholder="correoejemplo@gmail.com"></input>
             <label for="password" class="label">Password</label>
-            <input type="password" id="password" placeholder="***********" class="input-password">
-            <p class="invalid">Invalid user ID and password combination</p>
-            <input type="text" placeholder="Log in">
-            <p class="forgot">Forgot my password</p>
-            <input type="text" placeholder="Sign up">
-
+            <input type="password" class="password-box" placeholder="************" id="password"></input>
+            <p class="invalid"><a href="/">Invalid user ID and password combination</a></p>
+            <input type="submit" value="Log in" class="log-in"></input>
+            <p class="forgot"><a href="/">Forgot my password</a></p>
         </form>
+        <input type="submit" class="sign-up" value="Sign up"></input>
     </section>
 </body>
 
